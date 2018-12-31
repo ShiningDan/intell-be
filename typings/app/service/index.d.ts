@@ -3,9 +3,11 @@
 
 import 'egg';
 import ExportTest from '../../../app/service/Test';
+import ExportHome from '../../../app/service/home';
 
 declare module 'egg' {
   interface IService {
     test: ExportTest;
+    home: ExportHome;
   }
 }

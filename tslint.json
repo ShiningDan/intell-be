@@ -1,27 +1,39 @@
 {
   "extends": "tslint:latest",
   "rules": {
-    "quotemark": [
+    "curly": [true, "ignore-same-line"],
+    "ordered-imports": false,
+    "variable-name": [true, "check-format", "ban-keywords", "allow-snake-case", "allow-leading-underscore"],
+    "trailing-comma": [
       true,
-      "single",
-      "jsx-double"
+      {
+        "multiline": {
+          "objects": "ignore",
+          "arrays": "ignore",
+          "functions": "ignore",
+          "typeLiterals": "ignore"
+        },
+        "esSpecCompliant": true
+      }
     ],
-    "no-console": [
+    "no-this-assignment": [
       true,
-      "dir",
-      "log",
-      "error",
-      "warn"
+      {
+        "allowed-names": ["ctx", "app"],
+        "allow-destructuring": true
+      }
     ],
+    "semicolon": [true, "never"],
+    "arrow-parens": [true, "ban-single-arg-parens"],
+    "quotemark": [true, "single", "jsx-double"],
+    "no-console": {
+      "severity": "warning",
+      "options": ["debug", "info", "log", "warn", "error"]
+    },
     "space-before-function-paren": false,
-    "interface-name": [
-      true,
-      "never-prefix"
-    ],
+    "interface-name": [true, "never-prefix"],
     "adjacent-overload-signatures": true,
-    "member-access": [
-      false
-    ],
+    "member-access": [false],
     "member-ordering": [
       true,
       {
@@ -29,15 +41,11 @@
       }
     ],
     "object-literal-sort-keys": false,
-    "max-classes-per-file": [
-      true,
-      10
-    ],
-    "variable-name": [
-      true,
-      "allow-leading-underscore"
-    ],
-    "align": [true, "statements"]
+    "max-classes-per-file": [true, 10],
+    "align": [true, "statements"],
+    "object-literal-key-quotes": [true, "as-needed"],
+    "max-line-length": false,
+    "no-invalid-template-strings": false,
+    "no-submodule-imports": false
   }
 }
-

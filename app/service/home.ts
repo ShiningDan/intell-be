@@ -12,6 +12,7 @@ export default class Home extends Service {
     const user = await greetingRepository.findOne({
       name
     })
+    console.log(user)
     if (!user) {
       return 'Hello Anonymous'
     }

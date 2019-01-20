@@ -10,16 +10,16 @@ export default (app: Application) => {
   router.get('/home/greet', controller.home.greet)
   router.get('/home/isAdmin', controller.home.isAdmin)
 
-  // 保险 疑问：为何这里用router.post就404
-  router.get('/home/ins/getFeeOfMonth', controller.home.getFeeOfMonth)
+  // 保险
+  router.post('/ins/getFeeOfMonth', controller.ins.getFeeOfMonth)
 
   // 获取首页推荐保险
-  router.get('/home/ins', controller.home.getRecommendIns)
+  router.get('/ins', controller.ins.getRecommendIns)
 
   // 首页根据id获取保险详情
-  router.get('/home/ins/content', controller.home.getInsContent)
+  router.get('/ins/content', controller.ins.getInsContent)
 
   // 添加申请用户（只填写手机号的那些）
-  router.get('/home/ins/addApplyUser', controller.home.addApplyUser)
+  router.post('/ins/addApplyUser', controller.ins.addApplyUser)
 
 }

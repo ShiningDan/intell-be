@@ -4,14 +4,16 @@
 import 'egg';
 import ExportGreeting from '../../../app/model/greeting';
 import ExportIndex from '../../../app/model/index';
-import ExportInsInfo from '../../../app/model/insInfo';
-import ExportInsUser from '../../../app/model/insUser';
+import ExportInsInsInfo from '../../../app/model/ins/insInfo';
+import ExportInsInsUser from '../../../app/model/ins/insUser';
 
 declare module 'egg' {
   interface IModel {
     Greeting: ReturnType<typeof ExportGreeting>;
     Index: ReturnType<typeof ExportIndex>;
-    InsInfo: ReturnType<typeof ExportInsInfo>;
-    InsUser: ReturnType<typeof ExportInsUser>;
+    Ins: {
+      InsInfo: ReturnType<typeof ExportInsInsInfo>;
+      InsUser: ReturnType<typeof ExportInsInsUser>;
+    }
   }
 }

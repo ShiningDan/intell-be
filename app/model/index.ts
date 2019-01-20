@@ -1,6 +1,6 @@
 import GreetingModel from './greeting'
-import InsUserModel from './insUser'
-import InsInfoModel from './insInfo'
+import InsUserModel from './ins/insUser'
+import InsInfoModel from './ins/insInfo'
 
 export {
   GreetingModel,

@@ -5,21 +5,9 @@ import LoanUsersModel from './loanUsers'
 import LoanProductsModel from './loanProducts'
 
 export {
-  GreetingModel
-}
-
-export {
-  HomeProductModel
-}
-
-export {
-  HomeUserModel
-}
-
-export {
-  LoanUsersModel
-}
-
-export {
+  GreetingModel,
+  HomeProductModel,
+  HomeUserModel,
+  LoanUsersModel,
   LoanProductsModel
 }

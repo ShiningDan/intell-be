@@ -15,7 +15,7 @@ export default class HomeController extends Controller {
       ctx.validate({
         productId: 'int',
         name: 'string',
-        type: ['贷款', '保险', '信用卡']
+        type: ['loan', 'insurance', 'creditCard']
       }, payload)
       const data = await this.service.home.addProduct(payload)
       this.stdout(ctx, data)
@@ -33,13 +33,12 @@ export default class HomeController extends Controller {
       }, payload)
       const data = await this.service.home.search(payload)
       this.stdout(ctx, data)
-      console.log(this.ctx.name)
     } catch (err) {
      this.stderr(ctx, err)
     }
   }
 
-  public async application() {
+  public async apply() {
     const { ctx } = this
     try {
       const payload = this.getRequestPayload(ctx)
@@ -48,15 +47,14 @@ export default class HomeController extends Controller {
         name: 'string',
         phone: 'string',
       }, payload)
-      const data = await this.service.home.application(payload)
+      const data = await this.service.home.apply(payload)
       this.stdout(ctx, data)
-      console.log(this.ctx.name)
     } catch (err) {
      this.stderr(ctx, err)
     }
   }
 
-  public async calculator() {
+  public async calculate() {
     const { ctx } = this
     try {
       const payload = this.getRequestPayload(ctx)
@@ -67,9 +65,8 @@ export default class HomeController extends Controller {
         phone: 'string',
         carPrice: 'int',
       }, payload)
-      const data = await this.service.home.calculator(payload)
+      const data = await this.service.home.calculate(payload)
       this.stdout(ctx, data)
-      console.log(this.ctx.name)
     } catch (err) {
      this.stderr(ctx, err)
     }

@@ -17,7 +17,6 @@ export default class LoanController extends Controller {
       }, payload)
       const data = await this.service.loan.search(payload)
       this.stdout(ctx, data)
-      console.log(this.ctx.name)
     } catch (err) {
      this.stderr(ctx, err)
     }
@@ -55,6 +54,21 @@ export default class LoanController extends Controller {
       const data = await this.service.loan.calculate(payload)
       this.stdout(ctx, data)
       console.log(this.ctx.name)
+    } catch (err) {
+     this.stderr(ctx, err)
+    }
+  }
+
+  public async call () {
+    const { ctx } = this
+    try {
+      const payload = this.getRequestPayload(ctx)
+      ctx.validate({
+        phone: 'string'
+      }
+      , payload)
+      const data = await this.service.loan.call(payload)
+      this.stdout(ctx, data)
     } catch (err) {
      this.stderr(ctx, err)
     }

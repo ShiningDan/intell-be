@@ -14,15 +14,18 @@ export default class HomeUser {
   @Column()
   job: string
 
+  // 首页广告旁用户想了解的业务
   @Column()
   type: string
 
   @Column()
   monthlyIncome: number
 
+  // 首页房产类型
   @Column()
   houseType: string
 
+  // 汽车购置价格
   @Column()
   carPrice: number
 

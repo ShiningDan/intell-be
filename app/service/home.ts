@@ -1,5 +1,5 @@
 import { Service, Context } from 'egg'
-import { GreetingModel } from '../model'
+import { GreetingModel} from '../model'
 
 export default class Home extends Service {
   constructor(ctx: Context) {

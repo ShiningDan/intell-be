@@ -2,7 +2,6 @@
 // Do not modify this file!!!!!!!!!
 
 import 'egg';
-import ExportCreditCardProducts from '../../../app/model/creditCardProducts';
 import ExportGreeting from '../../../app/model/greeting';
 import ExportHomeProduct from '../../../app/model/homeProduct';
 import ExportHomeUser from '../../../app/model/homeUser';
@@ -12,7 +11,6 @@ import ExportLoanUsers from '../../../app/model/loanUsers';
 
 declare module 'egg' {
   interface IModel {
-    CreditCardProducts: ReturnType<typeof ExportCreditCardProducts>;
     Greeting: ReturnType<typeof ExportGreeting>;
     HomeProduct: ReturnType<typeof ExportHomeProduct>;
     HomeUser: ReturnType<typeof ExportHomeUser>;

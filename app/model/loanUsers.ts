@@ -6,28 +6,28 @@ export default class LoanUsers {
   id: number
 
   @Column()
-  name: string
+  name: string= ''
 
   @Column()
   phone: string
 
   @Column()
-  job: string
+  job: string= ''
 
   @Column()
-  monthlyIncome: number
+  monthlyIncome: number= -1
 
   @Column()
-  houseType: string
+  houseType: string= ''
 
   @Column()
-  housePrice: number
+  housePrice: number= -1
 
   @Column()
-  carPrice: number
+  carPrice: number= -1
 
   @Column()
-  amount: number
+  amount: number= -1
 
   @CreateDateColumn()
   createAt: Date

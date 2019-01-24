@@ -6,28 +6,28 @@ export default class HomeUser {
   id: number
 
   @Column()
-  name: string
+  name: string= ''
 
   @Column()
   phone: string
 
   @Column()
-  job: string
+  job: string= ''
 
   // 首页广告旁用户想了解的业务
   @Column()
-  type: string
+  type: string= ''
 
   @Column()
-  monthlyIncome: number
+  monthlyIncome: number= -1
 
   // 首页房产类型
   @Column()
-  houseType: string
+  houseType: string= ''
 
   // 汽车购置价格
   @Column()
-  carPrice: number
+  carPrice: number= -1
 
   @CreateDateColumn()
   createAt: Date

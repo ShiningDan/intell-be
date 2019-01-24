@@ -5,8 +5,9 @@ export default class LoanProducts {
   @PrimaryGeneratedColumn()
   id: number
 
+  // 1贷款  2 信用卡   3保险
   @Column()
-  productId: string
+  productType: number= 1
 
   @Column()
   name: string

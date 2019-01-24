@@ -8,11 +8,12 @@ export default class HomeProduct {
   @Column()
   productId: number
 
+  // 贷款  信用卡  保险
   @Column()
-  type: string
+  type: string = ''
 
   @Column()
-  name: string
+  name: string= ''
 
   @CreateDateColumn()
   createAt: Date

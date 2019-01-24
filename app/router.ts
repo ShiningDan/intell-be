@@ -6,16 +6,12 @@ export default (app: Application) => {
   // home
   // 判断系统是否存活的接口
   router.get('/alive', controller.home.alive)
-  // 增加首页产品
-  // router.post('/home/products', controller.home.addProduct)
   // 首页搜索框
   router.get('/home/search', controller.home.search)
   // 首页用户申请框
   router.post('/home/application', controller.home.apply)
   // 首页计算器
   router.post('/home/calculator', controller.home.calculate)
-  // 首页快速匹配适合您的信用卡
-  router.post('/home/creditCard', controller.home.match)
   // 首页底部用户免费通话框
   router.post('/home/phone', controller.home.call)
   // 判断是否是管理员

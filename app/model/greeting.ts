@@ -12,8 +12,8 @@ export default class Greeting {
   greeting: string
 
   @CreateDateColumn()
-  create_at: Date
+  createAt: Date
 
   @UpdateDateColumn()
-  update_at: Date
+  updateAt: Date
 }

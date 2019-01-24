@@ -10,9 +10,7 @@ export default class Loan extends Service {
   public async search({ name }: { name: string }): Promise<LoanProductsModel[]> {
   const { app } = this
   const loanProductRepository  = app.typeorm.getRepository(LoanProductsModel)
-  const product = await loanProductRepository.find({
-    name
-  })
+  const product = await loanProductRepository.find({name})
   if (product.length) {
     return product
   }else {
@@ -26,8 +24,6 @@ export default class Loan extends Service {
     const { app } = this
     const loanUserRepository  = app.typeorm.getRepository(LoanUsersModel)
     const user = new LoanUsersModel()
-    user.name = ''
-    user.amount = 0
     user.job = job
     user.monthlyIncome = monthlyIncome
     user.houseType = houseType
@@ -48,11 +44,6 @@ export default class Loan extends Service {
     const { app } = this
     const loanUserRepository  = app.typeorm.getRepository(LoanUsersModel)
     const user = new LoanUsersModel()
-    user.housePrice = 0
-    user.monthlyIncome = 0
-    user.houseType = ''
-    user.job = ''
-    user.carPrice = 0
     user.name = name
     user.phone = phone
     user.amount = amount
@@ -61,18 +52,11 @@ export default class Loan extends Service {
   }
 
   // 这里实现首页底部用户免费通话手机号存储
-  public async call({ phone}: { phone: string }): Promise<LoanUsersModel> {
+  public async call({ phone}: { phone: string}): Promise<LoanUsersModel> {
     const { app } = this
     const loanUserRepository  = app.typeorm.getRepository(LoanUsersModel)
     const user = new LoanUsersModel()
     user.phone = phone
-    user.name = 'unknown'
-    user.houseType = 'unknown'
-    user.job = 'unknown'
-    user.housePrice = -1
-    user.monthlyIncome = -1
-    user.carPrice = -1
-    user.amount = -1
     if (user.phone.length) {
       const result = await loanUserRepository.save(user)
       return result

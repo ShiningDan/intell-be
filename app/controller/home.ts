@@ -7,23 +7,7 @@ export default class HomeController extends Controller {
     this.stdout = ctx.helper.stdout
     this.stderr = ctx.helper.stderr
   }
-/*
-  public async addProduct() {
-    const { ctx } = this
-    try {
-      const payload = this.getRequestPayload(ctx)
-      ctx.validate({
-        productId: 'int',
-        name: 'string',
-        type: ['loan', 'insurance', 'creditCard']
-      }, payload)
-      const data = await this.service.home.addProduct(payload)
-      this.stdout(ctx, data)
-    } catch (err) {
-      this.stderr(ctx, err)
-    }
-  }
-*/
+
   public async search() {
     const { ctx } = this
     try {
@@ -66,19 +50,6 @@ export default class HomeController extends Controller {
         carPrice: 'int',
       }, payload)
       const data = await this.service.home.calculate(payload)
-      this.stdout(ctx, data)
-    } catch (err) {
-     this.stderr(ctx, err)
-    }
-  }
-
-  public async match() {
-    const { ctx } = this
-    try {
-      const payload = this.getRequestPayload(ctx)
-      ctx.validate({}
-      , payload)
-      const data = await this.service.home.match(payload)
       this.stdout(ctx, data)
     } catch (err) {
      this.stderr(ctx, err)

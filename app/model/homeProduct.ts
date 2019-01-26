@@ -1,15 +1,19 @@
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn} from 'typeorm'
 
 @Entity()
-export default class Greeting {
+export default class HomeProduct {
   @PrimaryGeneratedColumn()
   id: number
 
   @Column()
-  name: string
+  productId: number
+
+  // 贷款  信用卡  保险
+  @Column()
+  type: string = ''
 
   @Column()
-  greeting: string
+  name: string= ''
 
   @CreateDateColumn()
   createAt: Date

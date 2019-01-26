@@ -1,4 +1,9 @@
 import GreetingModel from './greeting'
+import HomeProductModel from './homeProduct'
+import HomeUserModel from './homeUser'
+import LoanUsersModel from './loanUsers'
+import LoanProductsModel from './loanProducts'
+
 import InsUserModel from './ins/insUser'
 import InsInfoModel from './ins/insInfo'
 
@@ -10,6 +15,10 @@ import CardUserModel from './creditCard/cardUser'
 
 export {
   GreetingModel,
+  HomeProductModel,
+  HomeUserModel,
+  LoanUsersModel,
+  LoanProductsModel,
   InsUserModel,
   InsInfoModel,
   CardActivityModel,

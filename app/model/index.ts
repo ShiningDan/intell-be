@@ -1,12 +1,12 @@
 import GreetingModel from './greeting'
-import InsUserModel from './ins/insUser'
-import InsInfoModel from './ins/insInfo'
+import InsUserModel from './insUser'
+import InsInfoModel from './insInfo'
 
-import CardActivityModel from './creditCard/cardActivity'
-import CardActRelaModel from './creditCard/cardActRela'
-import CardCardRelaModel from './creditCard/cardCardRela'
-import CardInfoModel from './creditCard/cardInfo'
-import CardUserModel from './creditCard/cardUser'
+import CardActivityModel from './cardActivity'
+import CardActRelaModel from './cardActRela'
+import CardCardRelaModel from './cardCardRela'
+import CardInfoModel from './cardInfo'
+import CardUserModel from './cardUser'
 
 export {
   GreetingModel,

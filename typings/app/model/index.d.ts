@@ -2,30 +2,26 @@
 // Do not modify this file!!!!!!!!!
 
 import 'egg';
+import ExportCardActivity from '../../../app/model/cardActivity';
+import ExportCardActRela from '../../../app/model/cardActRela';
+import ExportCardCardRela from '../../../app/model/cardCardRela';
+import ExportCardInfo from '../../../app/model/cardInfo';
+import ExportCardUser from '../../../app/model/cardUser';
 import ExportGreeting from '../../../app/model/greeting';
 import ExportIndex from '../../../app/model/index';
-import ExportCreditCardCardActivity from '../../../app/model/creditCard/cardActivity';
-import ExportCreditCardCardActRela from '../../../app/model/creditCard/cardActRela';
-import ExportCreditCardCardCardRela from '../../../app/model/creditCard/cardCardRela';
-import ExportCreditCardCardInfo from '../../../app/model/creditCard/cardInfo';
-import ExportCreditCardCardUser from '../../../app/model/creditCard/cardUser';
-import ExportInsInsInfo from '../../../app/model/ins/insInfo';
-import ExportInsInsUser from '../../../app/model/ins/insUser';
+import ExportInsInfo from '../../../app/model/insInfo';
+import ExportInsUser from '../../../app/model/insUser';
 
 declare module 'egg' {
   interface IModel {
+    CardActivity: ReturnType<typeof ExportCardActivity>;
+    CardActRela: ReturnType<typeof ExportCardActRela>;
+    CardCardRela: ReturnType<typeof ExportCardCardRela>;
+    CardInfo: ReturnType<typeof ExportCardInfo>;
+    CardUser: ReturnType<typeof ExportCardUser>;
     Greeting: ReturnType<typeof ExportGreeting>;
     Index: ReturnType<typeof ExportIndex>;
-    CreditCard: {
-      CardActivity: ReturnType<typeof ExportCreditCardCardActivity>;
-      CardActRela: ReturnType<typeof ExportCreditCardCardActRela>;
-      CardCardRela: ReturnType<typeof ExportCreditCardCardCardRela>;
-      CardInfo: ReturnType<typeof ExportCreditCardCardInfo>;
-      CardUser: ReturnType<typeof ExportCreditCardCardUser>;
-    }
-    Ins: {
-      InsInfo: ReturnType<typeof ExportInsInsInfo>;
-      InsUser: ReturnType<typeof ExportInsInsUser>;
-    }
+    InsInfo: ReturnType<typeof ExportInsInfo>;
+    InsUser: ReturnType<typeof ExportInsUser>;
   }
 }

@@ -7,7 +7,7 @@
     "typescript": true
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-intell-be",
+    "start": "yarn run tsc && egg-scripts start --daemon --title=egg-server-intell-be",
     "stop": "egg-scripts stop --title=egg-server-intell-be",
     "dev": "egg-bin dev -r egg-ts-helper/register",
     "debug": "egg-bin debug -r egg-ts-helper/register",
